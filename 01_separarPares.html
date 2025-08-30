@@ -6,11 +6,16 @@
     //Faça um programa que identifique os números pares e apresente-os ao fim do programa, ordenados de forma crescente.
 
     //ENTRADA
-
-    
+let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
+let pares = [];
     //PROCESSAMENTO
+for(let numero of listaDeNumeros){
 
+    if (numero % 2 === 0){
+      pares.push(numero)
+    }
+}
 
     //SAÍDA
-
+alert(pares.sort((a,b) => a - b).join(", "));
 </script>

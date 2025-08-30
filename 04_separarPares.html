@@ -6,11 +6,22 @@
     //Apresente apenas os números pares. Apresente também a quantidade de números pares que existem e apresente a quantidade de elementos da lista original.
 
     //ENTRADA
-
-
+let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
+let pares = [];
+let naoPresta = [];
+let elementos = [];
     //PROCESSAMENTO
-
-
+for (let numero of  listaDeItens){ 
+    if (typeof numero === "string" ){
+        elementos.push(numero);
+    } else {
+        if (Number.isInteger(Number(numero)) === true){
+            (numero % 2 === 0) ? pares.push(numero) : naoPresta.push(numero);
+        } else{
+            ((numero * 10 ) % 2 === 0) ? pares.push(numero): naoPresta.push(numero);
+        }   
+    }
+}
     //SAÍDA
-
+document.write(`Quantidade de números pares: ${pares.length} / lista de números pares: ${pares.join(', ')} / quantidade de elementos da lista original: ${elementos.length} `);
 </script>
