@@ -11,17 +11,13 @@ let pares = [];
 let naoPresta = [];
 let elementos = [];
     //PROCESSAMENTO
-for (let numero of  listaDeItens){ 
-    if (typeof numero === "string" ){
-        elementos.push(numero);
+for (let elemento of  listaDeItens){ 
+    if (typeof elemento === "string" ){
+        elementos.push(elemento);
     } else {
-        if (Number.isInteger(Number(numero)) === true){
-            (numero % 2 === 0) ? pares.push(numero) : naoPresta.push(numero);
-        } else{
-            ((numero * 10 ) % 2 === 0) ? pares.push(numero): naoPresta.push(numero);
-        }   
+        (elemento % 2 === 0) ? pares.push(elemento) : naoPresta.push(elemento); 
     }
 }
     //SAÍDA
-document.write(`Quantidade de números pares: ${pares.length} / lista de números pares: ${pares.join(', ')} / quantidade de elementos da lista original: ${elementos.length} `);
+document.write(`Quantidade de números pares: ${pares.length} / lista de números pares: ${pares.join(', ')} / quantidade de elementos da lista original: ${listaDeItens.length} `);
 </script>
